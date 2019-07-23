@@ -1,0 +1,46 @@
+{% extends 'projethtml/index.html'%}
+
+{% block content %}
+<div class="registration" id="register">
+
+  <h1>FORMULAIRE D'INSCRIPTION</h1><br>
+
+
+  <fieldset>
+    <form method="POST" id="registrer" action="{{ url_for ('inscription') }}">
+      <h2>inscrivez vous ici</h2>
+      <label>Nom :</label><br>
+      <input type="text" name="nom_ap" id="name" placeholder="saisissez votre nom"><br> <br>
+      <label>Prenom :</label><br>
+      <input type="text" Last name="prenom_ap" id="Lname" placeholder="saisissez votre prenom "><br> <br>
+      <label>Age :</label><br>
+      <input type="number" name="age" id="age" placeholder="age"><br> <br>
+      <label>Adresse :</label><br>
+      <input type="texte" name="adresse" id="Adresse" placeholder="Donnez votre adresse precise"><br> <br>
+      <label>matricule :</label><br>
+      <input type="texte" name="matricule" id="matricule" placeholder="remplir la matricule"><br> <br>
+      <br>
+      <br>
+      <label>Telephone : </label><br>
+      <select id="phone">
+        <option>+221</option>
+        <option>+1</option>
+        <option>+2</option>
+        <option>+3</option>
+        <option>+39</option>
+        <option>+33</option>
+
+      </select>
+      <input type="number" name="telephone" id="phone" placeholder="Donner votre numero de tel"><br>
+      <h3>vous etes </h3>
+      <input type="radio" name="genre" id="male"> <span id="male"> &nbsp;Homme</span>&nbsp;
+      <input type="radio" name="genre" id="Fmale"> <span id="Fmale"> &nbsp;Femme</span>&nbsp;<br><br>
+      <label>Promotion :</label><br>
+      <input type="texte" name = "promo"  placeholder="precisez la Promotion"><br> <br>
+      <input type="submit" value="submit" id="sub">
+    </form>
+  </fieldset>
+
+
+</div>
+{% endblock content%}
